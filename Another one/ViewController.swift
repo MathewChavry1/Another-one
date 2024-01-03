@@ -13,7 +13,25 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+    
+    @IBOutlet weak var isON: UISwitch!
+    
+    @IBAction func goToGreen(_ sender: Any) {
+        
+        if isON.isOn == true{
+            performSegue(withIdentifier: "Green" , sender: nil)
+        }
+    }
+    
+    
+    
+    @IBAction func goToYellow(_ sender: Any) {
+        if isON.isOn == true{
+            performSegue(withIdentifier: "Yellow" , sender: nil)
+        }
+    }
+    @IBAction func unwindHome(unwindSegue: UIStoryboardSegue) { }
 
 }
 
